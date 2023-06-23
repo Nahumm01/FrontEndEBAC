@@ -1,21 +1,33 @@
-h1{
-    color: blueviolet;
-}
-
-#sports h2{
-    color: green;
-}
-
-#economy h2{
-    color: gold;
-}
-
-.creation-date{
-    font-style: italic;
-    color: grey;
-}
-
 *{
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+header li{
+    display: inline;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+  
+}
+
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    
+}
+
+.article article img {
+    height: 180px;
+}
+
+.article article{
+    width: 30%;
+    
+
+}
