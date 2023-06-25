@@ -1,33 +1,100 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header li{
-    display: inline;
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > header {
+  justify-content: center;
+  display: flex;
+  background-color: grey;
+  color: white;
+  padding: 16px 0;
+}
+
+header li {
+  display: inline;
+  justify-content: center;
+}
+
+header li a {
+  color: azure;
 }
 
 .container {
-    width: 1366px;
-    margin: 0 auto;
-  
+  width: 1366px;
+  margin: 0 auto;
 }
 
 .article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .article article img {
-    height: 180px;
+  height: 180px;
 }
 
-.article article{
-    width: 30%;
-    
+.article article {
+  width: 30%;
+}
 
+section {
+  padding: 16px 0;
+}
+
+section h2,
+.article article {
+  margin-bottom: 20px;
+}
+
+.article article h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.article article a {
+  background-color: blueviolet;
+  color: azure;
+  padding: 8px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.article article a:hover {
+    text-decoration: underline;
+}
+
+.article article p, .article article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article article h3{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section h2{
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sports{
+    background-color: rgba(0,255,0,0.1 );
+}
+
+#sports .article article a{
+    background-color: rgba(0, 255, 0, 0.8);
+    color: black;
+}
+
+#economy{
+    background-color: rgba(0, 200, 150, 0.1);
 }
