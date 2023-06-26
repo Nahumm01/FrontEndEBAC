@@ -8,6 +8,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body > header {
@@ -21,10 +22,14 @@ body > header {
 header li {
   display: inline;
   justify-content: center;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 header li a {
   color: azure;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
 }
 
 .container {
@@ -39,7 +44,7 @@ header li a {
 }
 
 .article article img {
-  height: 180px;
+  width: 100%;
 }
 
 .article article {
@@ -66,35 +71,45 @@ section h2,
   padding: 8px;
   display: inline-block;
   text-decoration: none;
+  border-radius: 35%;
+  font-weight: bold;
+  margin-top: 8px;
 }
 
 .article article a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.article article p, .article article a {
-    font-family: Arial, Helvetica, sans-serif;
+.article article p,
+.article article a {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.article article h3{
-    font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.article article h3 {
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section h2{
-    font-size: 32px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+section h2 {
+  font-size: 32px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
 }
 
-#sports{
-    background-color: rgba(0,255,0,0.1 );
+#sports {
+  background-color: rgba(0, 255, 0, 0.1);
 }
 
-#sports .article article a{
-    background-color: rgba(0, 255, 0, 0.8);
-    color: black;
+#sports .article article a {
+  background-color: rgba(0, 255, 0, 0.8);
+  color: black;
 }
 
-#economy{
-    background-color: rgba(0, 200, 150, 0.1);
+#economy {
+  background-color: rgba(255, 215, 0, 0.4);
+}
+
+#economy .article a {
+  background-color: tomato;
+  color: black;
 }
