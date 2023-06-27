@@ -14,7 +14,7 @@ header .container {
 body > header {
   justify-content: center;
   display: flex;
-  background-color: grey;
+  background: linear-gradient(to right, #9d4edd, #0a8af7);
   color: white;
   padding: 16px 0;
 }
@@ -111,5 +111,23 @@ section h2 {
 
 #economy .article a {
   background-color: tomato;
+  color: black;
+}
+
+#tech {
+  background-color: rgb(181, 248, 242);
+}
+
+#tech .article a {
+  background-color: rgb(84, 84, 252);
+  color: black;
+}
+
+#entmnt {
+  background-color: rgb(250, 235, 249);
+}
+
+#entmnt .article a {
+  background-color: pink;
   color: black;
 }
