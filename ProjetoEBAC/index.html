@@ -63,27 +63,28 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="contato">
       <div class="contHeader">
         <h2>Contato</h2>
-        <div>
+        <div class="contato-methods">
           <div>
             <h3>Fale Conosco</h3>
             <form>
-              <input type="text" placeholder="Seu nome" />
-              <input type="email" placeholder="Seu email" />
-              <input type="tel" placeholder="Seu telefone" />
+              <input type="text" placeholder="Seu nome" required />
+              <input type="email" placeholder="Seu email" required />
+              <input type="tel" placeholder="Seu telefone(Opcional)" />
               <textarea
-                cols="30"
-                rows="10"
+                cols="10"
+                rows="5"
                 placeholder="Deixe sua mensagem"
+                required
               ></textarea>
               <button type="submit">Enviar</button>
             </form>
           </div>
           <div>
             <h3>Redes Sociais</h3>
-            <ul>
+            <ul class="logoSocial">
               <li>
                 <a href="#" title="Siga-nos no Instagram!">
                   <img src="./images/instagram.png" alt="Instagram Logo"
@@ -103,7 +104,7 @@
           </div>
           <div>
             <h3>Venha até nós!</h3>
-              <address>Rua Java, Nº 8, Oracle - Jv</address>
+            <address>Rua Java, Nº 8, Oracle - Jv</address>
           </div>
         </div>
       </div>
