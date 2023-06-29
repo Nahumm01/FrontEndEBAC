@@ -4,16 +4,30 @@
   box-sizing: border-box;
 }
 
+header,
+section h2 {
+  font-family: "Bungee", cursive;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
   padding: 16px 0;
   background-color: #182c61;
   color: #ecf0f1;
 }
 
+header h1,
+section h2 {
+  font-weight: normal;
+}
+
 header nav li {
   display: inline;
   margin-left: 16px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 header nav li a {
@@ -27,8 +41,40 @@ header nav li a {
   margin: 0 auto;
 }
 
-header .contHeader {
+header .contHeader,
+section .contHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logoGames img {
+  height: 24px;
+  width: auto;
+}
+
+.logoGames li {
+  display: inline;
+  margin-right: 8px;
+}
+
+section .contHeader {
+  align-items: flex-start;
+}
+
+section {
+  padding: 24px 0;
+  color: #182c61;
+}
+
+section h2 {
+  margin-bottom: 16px;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+.store-front {
+  margin-right: 32px;
 }
