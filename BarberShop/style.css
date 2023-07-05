@@ -1,41 +1,65 @@
-*{
-    margin: 0;
-	padding: 0;
-	border: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-header{
-    display: block;
-    padding: 10px ;
-    margin: 10px auto;
-    background-color: yellowgreen;
-    color: white;
-    font-size: 20px;
-
+header {
+  display: block;
+  background-color: yellowgreen;
+  color: white;
+  font-size: 20px;
 }
 
-header nav li{
-    display: inline;
-    margin-right: 10px;
-    font-size: 19px;
+header nav li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 19px;
 }
 
 header nav li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.container{
-    max-width:1366px;
-    width: 100%;
-    margin: 0 auto;
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about {
+  background-color: aqua;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+}
+
+.about h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+.about p {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+.about img {
+  height: 400px;
+  width: auto;
+  margin-left: 20px;
+  display: flex;
+}
+
+section .about .img-barber {
+  margin-right: 32px;
 }
