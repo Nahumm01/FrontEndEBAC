@@ -100,8 +100,56 @@ section .container {
   background-position: center;
 }
 
-.btnPromo{
+.btnPromo {
   background-image: url(./images/pexels-thgusstavo-santana-2040189.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact-links li {
+  display: flex;
+  display: inline;
+  margin-right: 20px;
+}
+
+.contact-links li img {
+  width: 40px;
+}
+
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: #182c61;
+  color: #ecf0f1;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #324986;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: #182c61;
 }
