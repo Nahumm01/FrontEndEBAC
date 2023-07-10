@@ -4,8 +4,23 @@
   box-sizing: border-box;
 }
 
+body,
+form,input,
+button, textarea {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 22px;
+  color: cornsilk;
+}
+
+header h2,
+section h2,
+section h3, footer {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+}
+
 body {
-  background-color: url(./images/pexels-cottonbro-studio-4542858.jpg);
+  background-image: url(./images/pexels-cottonbro-studio-4542858.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -47,22 +62,6 @@ section .container {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.about .container,
-.products .container,
-.contact .container,
-.local .container h2 {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.about .container,
-.products .container,
-.contact .container,
-.local .container p {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .products-shop {
@@ -107,6 +106,7 @@ section .container {
 
 .contact {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contact h2 {
@@ -150,9 +150,8 @@ form button:hover {
 
 input:focus,
 textarea:focus {
-  outline-color: #182c61;
+  outline-color: #b30101;
 }
-
 
 footer {
   background: linear-gradient(to left, #003399, #dc143c, #ffffff);
@@ -163,5 +162,10 @@ footer {
 footer p {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+}
+
+
+.local .container p{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
