@@ -5,8 +5,10 @@
 }
 
 body,
-form,input,
-button, textarea {
+form,
+input,
+button,
+textarea {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 22px;
   color: cornsilk;
@@ -14,7 +16,8 @@ button, textarea {
 
 header h2,
 section h2,
-section h3, footer {
+section h3,
+footer {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
 }
@@ -36,38 +39,22 @@ header nav li {
   margin-right: 10px;
 }
 
-header nav li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
 .container {
-  max-width: 1280px;
+  max-width: 1366px;
   width: 100%;
   margin: 0 auto;
 }
 
-header .container,
-section .container {
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.about .container,
-.products .container,
-.contact .container,
-.local .container {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .products-shop {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center;
 }
 
 .products-shop li {
@@ -164,8 +151,7 @@ footer p {
   justify-content: center;
 }
 
-
-.local .container p{
+.local .container p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
