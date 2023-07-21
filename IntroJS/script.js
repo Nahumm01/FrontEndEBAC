@@ -1,4 +1,5 @@
 const form = document.getElementById("form-deposito");
+const nomeBeneficiario = document.getElementById("nome-beneficiario");
 
 function validaNome(nomeCompleto) {
   const nomeArray = nomeCompleto.split(" ");
@@ -10,23 +11,27 @@ form.addEventListener("submit", function (e) {
 
   let formValido = false;
 
-  const nomeBeneficiario = document.getElementById("nome-beneficiario");
   const numeroConta = document.getElementById("numero-conta");
   const valorDeposito = document.getElementById("valor");
-  const msgSucess = `O valor de: ${valorDeposito.value} despositado para o Cliente: ${nomeBeneficiario.value} - Conta:${numeroConta.value} foi enviado com sucesso!`;
+  const msgSucess = `O valor de: <b>${valorDeposito.value}</b> despositado para o Cliente: <b>${nomeBeneficiario.value}</b> - Conta:<b>${numeroConta.value}</b> foi enviado com sucesso!`;
+  const errorMsg = `O nome precisa ser completo!`;
 
   formValido = validaNome(nomeBeneficiario.value);
 
   if (formValido) {
-    alert(msgSucess);
+    const containerMsgSucess = document.querySelector(".msgSucess");
+    containerMsgSucess.innerHTML = msgSucess;
+    containerMsgSucess.style.display = "block";
 
     nomeBeneficiario.value = " ";
     numeroConta.value = " ";
     valorDeposito.value = " ";
-    
   } else {
-    alert("O nome não está completo!");
+    nomeBeneficiario.style.border = "1px solid red";
+    const containerMsgSucess = document.querySelector(".errorMsg");
+    containerMsgSucess.innerHTML = errorMsg;
+    containerMsgSucess.style.display = "block";
   }
 });
 
-console.log(form);
+
