@@ -18,6 +18,9 @@
           required
           placeholder="Nome completo do beneficiário"
         />
+        <p class="errorMsg">
+          O nome precisa ser completo!
+        </p>
         <input
           type="number"
           id="numero-conta"
@@ -28,6 +31,11 @@
         <textarea id="descricao" placeholder="Descrição (opcional)"></textarea>
         <button id="btn-depositar" type="submit">Depositar</button>
       </form>
+
+      <p class="msgSucess">
+        O montante de <b>1000</b> foi enviado para o cliente
+        <b>Nome do Cliente</b> - Conta <b>Conta</b>
+      </p>
     </div>
 
     <script src="./script.js"></script>
