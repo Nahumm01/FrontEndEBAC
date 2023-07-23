@@ -1,5 +1,6 @@
 const form = document.getElementById("form-deposito");
 const nomeBeneficiario = document.getElementById("nome-beneficiario");
+let formValido = false;
 
 function validaNome(nomeCompleto) {
   const nomeArray = nomeCompleto.split(" ");
@@ -8,8 +9,6 @@ function validaNome(nomeCompleto) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-
-  let formValido = false;
 
   const numeroConta = document.getElementById("numero-conta");
   const valorDeposito = document.getElementById("valor");
@@ -34,4 +33,14 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-
+nomeBeneficiario.addEventListener("keyup", function (e) {
+  console.log(e.target.value);
+  formValido = validaNome(e.target.value);
+  if (!formValido) {
+    nomeBeneficiario.classList.add('error')
+    document.querySelector(".errorMsg").style.display="block"
+  } else {
+    nomeBeneficiario.classList.remove('error')
+    document.querySelector(".errorMsg").style.display = "none";
+  }
+});
