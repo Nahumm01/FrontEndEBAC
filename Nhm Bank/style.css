@@ -81,3 +81,9 @@ button:hover {
   border-radius: 15px 0 15px 0;
   display: none;
 }
+
+input.error{
+  color: red;
+  border-color: red;
+  outline-color:red ;
+}
