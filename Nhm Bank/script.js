@@ -1,7 +1,8 @@
 const nomeDestino = document.getElementById("nomeDestino");
-const saldoConta = document.getElementById("saldoConta");
-const valorTransfer = document.getElementById("valorTransfer");
 const form = document.getElementById("form");
+const saldoContaInput = document.getElementById("saldoConta");
+const valorTransferInput = document.getElementById("valorTransfer");
+
 let formValido = false;
 
 //Função valida nome
@@ -15,8 +16,8 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   //Declarando as variáveis de escopo local
-  const msgSucess = `O valor de: <b>${valorTransfer.value}R$</b> foi despositado com sucesso para o Cliente: <b>${nomeDestino.value} !</b>`;
-  const errorMsg = `O nome precisa ser completo!`
+  const msgSucess = `O valor de: <b>${valorTransfer.value} R$</b> foi despositado com sucesso para o Cliente: <b>${nomeDestino.value} !</b>`;
+  const errorMsg = `O nome precisa ser completo!`;
   const msgTransfer = document.getElementById("msgTransfer");
 
   formValido = validaNome(nomeDestino.value);
@@ -36,6 +37,15 @@ form.addEventListener("submit", function (e) {
     containerMsgError.innerHTML = errorMsg;
     containerMsgError.style.display = "block";
   }
+
+  if (valorTransfer > saldoConta) {11
+    alert("Você não tem esse saldo!");
+  } else if (valorTransfer >= saldoConta) {
+    alert("Você tem o valor, mas sua conta ficará zerada!");
+  } else {
+    alert("Valor transferido com sucesso!");
+  }
+
 });
 
 nomeDestino.addEventListener("input", function (e) {
@@ -51,3 +61,4 @@ nomeDestino.addEventListener("input", function (e) {
     document.querySelector(".errorMsg").style.display = "none";
   }
 });
+
