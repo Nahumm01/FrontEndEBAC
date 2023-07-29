@@ -1,35 +1,41 @@
-const nomeDestino = document.getElementById("nomeDestino");
+//VAR FORM
 const form = document.getElementById("form");
+let formValido = false;
+
+//VAR INPUTS
+const nomeDestino = document.getElementById("nomeDestino");
 const saldoContaInput = document.getElementById("saldoConta");
 const valorTransferInput = document.getElementById("valorTransfer");
 
-let formValido = false;
+//VAR MENSAGENS
+const containerMsgSucess = document.querySelector(".msgSucess");
+const msgTransfer = document.getElementById("msgTransfer");
+const errorMsg = `O nome precisa ser completo!`;
 
-//Função valida nome
+//FUNÇÃO PARA VALIDAÇÃO DE NOME COM DOIS CAMPOS
 function validaNome(nomeCompleto) {
   const nomeEmArray = nomeCompleto.split(" ");
   return nomeEmArray.length >= 2;
 }
 
-//Retirando o reload pós submit
+//FUNÇÃO PARA VALIDAÇÃO DE SALDO
+function validaSaldo(valorTransferInput, saldoContaInput) {
+  return valorTransferInput < saldoContaInput;
+}
+
+//RETIRA RELOAD PÓS SUBMIT // EXIBE MENSAGEM DE SUCESSO/ERRO
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  //Declarando as variáveis de escopo local
-  const msgSucess = `O valor de: <b>${valorTransfer.value} R$</b> foi despositado com sucesso para o Cliente: <b>${nomeDestino.value} !</b>`;
-  const errorMsg = `O nome precisa ser completo!`;
-  const msgTransfer = document.getElementById("msgTransfer");
-
   formValido = validaNome(nomeDestino.value);
-  console.log(formValido);
+  const msgSucess = `O valor de: <b>${valorTransferInput.value} R$</b> foi despositado com sucesso para o Cliente: <b>${nomeDestino.value} !</b>`;
 
   if (formValido) {
-    const containerMsgSucess = document.querySelector(".msgSucess");
     containerMsgSucess.innerHTML = msgSucess;
     containerMsgSucess.style.display = "block";
     nomeDestino.value = "";
-    valorTransfer.value = " ";
-    saldoConta.value = " ";
+    valorTransferInput.value = " ";
+    saldoContaInput.value = " ";
     msgTransfer.value = " ";
   } else {
     nomeDestino.style.border = "1px solid red";
@@ -37,20 +43,10 @@ form.addEventListener("submit", function (e) {
     containerMsgError.innerHTML = errorMsg;
     containerMsgError.style.display = "block";
   }
-
-  if (valorTransfer > saldoConta) {11
-    alert("Você não tem esse saldo!");
-  } else if (valorTransfer >= saldoConta) {
-    alert("Você tem o valor, mas sua conta ficará zerada!");
-  } else {
-    alert("Valor transferido com sucesso!");
-  }
-
 });
 
+//RETIRA A PERMANÊNCIA DA CAIXA DE ERRO DA VALIDAÇÃO DE NOMES
 nomeDestino.addEventListener("input", function (e) {
-  console.log(e.target.value);
-
   formValido = validaNome(e.target.value);
   console.log(formValido);
   if (!formValido) {
@@ -62,3 +58,24 @@ nomeDestino.addEventListener("input", function (e) {
   }
 });
 
+//VALIDAÇÃO DE SALDO PARA TRANSFERÊNCIA
+valorTransferInput.addEventListener("input", function (e) {
+  const parseTransfer = parseFloat(valorTransferInput.value);
+  const parseSaldo = parseFloat(saldoContaInput.value);
+  const containerErrorTransfer = document.querySelector(".errorTransfer");
+  const containerSucessTransfer = document.querySelector(".sucessTransfer")
+  const btnEnvio = document.getElementById("btnEnvio")
+
+  transValida = validaSaldo(parseTransfer, parseSaldo);
+
+  if (!transValida) {
+    containerErrorTransfer.style.display = "block";
+    containerSucessTransfer.style.display = "none"
+    btnEnvio.disabled = true
+  } else {
+    containerErrorTransfer.style.display = "none";
+    containerSucessTransfer.style.display = "block"
+    btnEnvio.disabled = false
+  }
+
+});
