@@ -20,7 +20,9 @@ function validaNome(nomeCompleto) {
 
 //FUNÇÃO PARA VALIDAÇÃO DE SALDO
 function validaSaldo(valorTransferInput, saldoContaInput) {
-  return valorTransferInput < saldoContaInput;
+  if (saldoContaInput >= valorTransferInput) {
+    return true
+  } else {}
 }
 
 //RETIRA RELOAD PÓS SUBMIT // EXIBE MENSAGEM DE SUCESSO/ERRO
