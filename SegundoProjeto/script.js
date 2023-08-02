@@ -3,6 +3,9 @@ const inputNomeAtividade = document.getElementById("nomeAtividade");
 const inputNotaAtividade = document.getElementById("notaAtividade");
 const imgAprove = `<img src="./images/aprovado.png" alt="Emoji Celebrando" />`;
 const imgReprove = `<img src="./images/reprovado.png" alt="Emoji Triste" />`;
+const spanAprove = `<span class="resultado aprovado">Aprovado</span>`;
+const spanReprove = `<span class="resultado reprovado">Reprovado</span>`;
+const notaMinima = parseFloat(prompt("Digite a nota mínima!"));
 let linhas = "";
 const atividades = [];
 const notas = [];
@@ -16,19 +19,21 @@ form.addEventListener("submit", function (e) {
 });
 
 function addLinha() {
-  atividades.push(inputNomeAtividade.value);
-  notas.push(parseFloat(inputNotaAtividade.value));
+  if (atividades.includes(inputNomeAtividade.value)) {
+    alert(`A atividade ${inputNomeAtividade.value} já foi inserida!`);
+  } else {
+    atividades.push(inputNomeAtividade.value);
+    notas.push(parseFloat(inputNotaAtividade.value));
+    let linha = "<tr>";
+    linha += `<td> ${inputNomeAtividade.value}  </td>`;
+    linha += `<td> ${inputNotaAtividade.value}  </td>`;
+    linha += `<td> ${
+      inputNotaAtividade.value >= notaMinima ? imgAprove : imgReprove
+    }</td>`;
+    linha += "</tr>";
 
-  let linha = "<tr>";
-  linha += `<td> ${inputNomeAtividade.value}  </td>`;
-  linha += `<td> ${inputNotaAtividade.value}  </td>`;
-  linha += `<td> ${
-    inputNotaAtividade.value >= 7 ? imgAprove : imgReprove
-  }</td>`;
-  linha += "</tr>";
-
-  linhas += linha;
-
+    linhas += linha;
+  }
   inputNomeAtividade.value = "";
   inputNotaAtividade.value = "";
 }
@@ -41,13 +46,9 @@ function attLinha() {
 function attMedias() {
   const mediaFinal = calcNotaFinal();
 
-  document.getElementById("mediaFinal").innerHTML = mediaFinal;
-  document.getElementById("resultadoFinal").innerHTML = mediaFinal >= 7 ? "Aprovado" : "Reprovado"
-  
-  
-  
-  console.log(somaNotas);
-  console.log(notas);
+  document.getElementById("mediaFinal").innerHTML = mediaFinal.toFixed(2);
+  document.getElementById("resultadoFinal").innerHTML =
+    mediaFinal >= notaMinima ? spanAprove : spanReprove;
 }
 
 function calcNotaFinal() {
