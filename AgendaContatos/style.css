@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 120px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+header p {
+  font-size: 20px;
+}
+header h1,
+header p {
+  margin-bottom: 10px;
+}
+
+#container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+}
+
+form input {
+  background-color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  border-bottom: 2px dotted #000;
+}
+
+form button {
+  background-color: greenyellow;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 2px dotted #000;
+}
+
+form input,
+form button {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  padding: 10px;
+}
+
+table th {
+  font-size: 24px;
+  border-bottom: 2px solid #000;
+  padding: 20px;
+}
+
+table td {
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.tdStatus{
+    
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.addSucess{
+    background-color:  #009435;;
+}
+
+.addError{
+    background-color: #b94343;
+}
