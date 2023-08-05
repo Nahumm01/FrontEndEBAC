@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Smart Contacts</h1>
+        <p>Salve seus contatos abaixo!</p>
+      </header>
+      <form id="form">
+        <input id="nomeInput" type="text" required placeholder="Nome" />
+        <input
+          id="telefoneInput"
+          type="number"
+          required
+          placeholder="Telefone"
+        />
+        <button id="btnAdicionar" type="submit">Adicionar</button>
+      </form>
+      <table cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nome do Contato</th>
+            <th>Telefone do Contato</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            <td>André</td>
+            <td>(11)9999-9999</td>
+            <span><td class="tdStatus addError">Adicionado com Sucesso!</td></span>
+        </tbody>
+        <tfoot>
+          <tr> 
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
