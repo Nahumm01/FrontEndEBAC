@@ -32,7 +32,7 @@ header p {
 }
 
 form {
-  display: flex;
+  display: block;
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
@@ -62,7 +62,7 @@ form button {
 form input,
 form button {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 table {
@@ -96,4 +96,35 @@ table td {
 
 .addError {
   background-color: #b94343;
+}
+
+.errorMsg {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nomeError {
+  border: 1px solid #FF0000;
+  background-color: #FF5252;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 35px;
+  padding: 8px;
+  text-align: center;
+  display: none;
+}
+
+.telError {
+  border: 1px solid #FF0000;
+  background-color: #FF5252;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-right: 35px;
+  padding: 8px;
+  text-align: center;
+  display: none;
 }
