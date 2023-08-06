@@ -3,7 +3,8 @@ const inputTel = document.getElementById("telefoneInput");
 const form = document.getElementById("form");
 const btnEnvio = document.querySelector(".btnEnvio");
 btnEnvio.disabled = false;
-
+let nomes = [];
+let telefones = [];
 let linhas = "";
 
 form.addEventListener("submit", function (e) {
@@ -14,12 +15,22 @@ form.addEventListener("submit", function (e) {
 });
 
 function addLinhas() {
-  let linha = "<tr>";
-  linha += `<td> ${inputNome.value} </td>`;
-  linha += `<td> ${inputTel.value} </td>`;
-  linha += "</tr>";
+  if (nomes.includes(inputNome.value)) {
+    alert(`O nome: ${inputNome.value} já existe nos contatos!`);
+    if (telefones.includes(inputTel.value)) {
+      alert(`O número: ${inputTel.value} já existe na agenda!`);
+    }
+  } else {
+    nomes.push(inputNome.value);
+    telefones.push(inputTel.value);
 
-  linhas += linha;
+    let linha = "<tr>";
+    linha += `<td> ${inputNome.value} </td>`;
+    linha += `<td> ${inputTel.value} </td>`;
+    linha += "</tr>";
+
+    linhas += linha;
+  }
 }
 
 function attBody() {
@@ -31,6 +42,10 @@ function attBody() {
 }
 
 //ADICIONAR VALIDAÇÃO DO CAMPO STATUS
+
+//ADICIONAR VALIDAÇÃO DO CAMPO NOME PARA ACEITAR APENAS STRING, NOT NULL, NOT NUMBERS
+
+//CORRIGIR RESPONSIVIDADE DA TABLE AO EXIBIR AS MSGS DE ERRO
 
 //ADICIONAR VALIDAÇÃO DE CAMPO COM DOIS NOMES
 function validaNome(nomeCompleto) {
@@ -54,8 +69,6 @@ inputNome.addEventListener("input", function (e) {
     btnEnvio.style.cursor = "pointer";
   }
 });
-
-//ADICIONAR CONDICIONAL PARA BARRAR NOMES IGUAIS
 
 //MANIPULAR CAMPO TELEFONE PARA JA VIR COM FORMATO BR: (XX)XXXXX-XXXX
 function formatarNumeroTel(numeroTel) {
