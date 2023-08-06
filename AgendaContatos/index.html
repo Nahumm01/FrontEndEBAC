@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agenda de Contatos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container">
@@ -13,14 +13,24 @@
         <p>Salve seus contatos abaixo!</p>
       </header>
       <form id="form">
-        <input id="nomeInput" type="text" required placeholder="Nome" />
+        <input id="nomeInput" type="text" required placeholder="Nome + Sobrenome" />
+
         <input
           id="telefoneInput"
-          type="number"
+          type="tel"
+          maxlength="14"
           required
-          placeholder="Telefone"
+          placeholder="(DDD) + Telefone"
         />
-        <button id="btnAdicionar" type="submit">Adicionar</button>
+        <button class="btnEnvio" type="submit">Adicionar</button>
+        <div class="errorMsg">
+          <div>
+            <p class="nomeError">Insira corretamente!</p>
+          </div>
+          <div>
+            <p class="telError">Deve seguir os padrões!</p>
+          </div>
+        </div>
       </form>
       <table cellspacing="0">
         <thead>
@@ -31,9 +41,11 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-            <td>André</td>
-            <td>(11)9999-9999</td>
-            <span><td class="tdStatus addError">Adicionado com Sucesso!</td></span>
+          <td>André</td>
+          <td>(11)9999-9999</td>
+          <span
+            ><td class="tdStatus addError">Adicionado com Sucesso!</td></span
+          >
         </tbody>
       </table>
     </div>
