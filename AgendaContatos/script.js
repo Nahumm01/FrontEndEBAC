@@ -1,6 +1,8 @@
 const inputNome = document.getElementById("nomeInput");
 const inputTel = document.getElementById("telefoneInput");
 const form = document.getElementById("form");
+const btnEnvio = document.querySelector(".btnEnvio");
+btnEnvio.disabled = false;
 
 let linhas = "";
 
@@ -39,19 +41,17 @@ function validaNome(nomeCompleto) {
 inputNome.addEventListener("input", function (e) {
   let nomeValido = validaNome(e.target.value);
   const errorNome = document.querySelector(".nomeError");
-  const btnEnvio = document.querySelector(".btnEnvio")
-  btnEnvio.disabled = false
 
   if (!nomeValido) {
     inputNome.style.outline = "1px solid red";
     errorNome.style.display = "block";
-    btnEnvio.disabled = true
-    btnEnvio.style.cursor = "not-allowed"
+    btnEnvio.disabled = true;
+    btnEnvio.style.cursor = "not-allowed";
   } else {
     inputNome.style.outline = "1px solid green";
     errorNome.style.display = "none";
-    btnEnvio.disabled = false
-    btnEnvio.style.cursor = "pointer"
+    btnEnvio.disabled = false;
+    btnEnvio.style.cursor = "pointer";
   }
 });
 
@@ -68,12 +68,27 @@ function formatarNumeroTel(numeroTel) {
 
     return `(${ddd}) ${numberPt1}-${numberPt2}`;
   } else {
-    return numeroLimpo;
+    return null;
   }
 }
 
 inputTel.addEventListener("input", function (e) {
   const numeroTel = e.target.value;
   const numeroTelFormatado = formatarNumeroTel(numeroTel);
-  e.target.value = numeroTelFormatado;
+  const telError = document.querySelector(".telError");
+
+  if (numeroTelFormatado === null) {
+    inputTel.style.outline = "1px solid red";
+    telError.style.display = "block";
+    btnEnvio.disabled = true;
+    btnEnvio.style.cursor = "not-allowed";
+  } else {
+    inputTel.style.outline = "1px solid green";
+    telError.style.display = "none";
+    btnEnvio.disabled = false;
+    btnEnvio.style.cursor = "pointer";
+    e.target.value = numeroTelFormatado;
+  }
+
+  e.target.value = numeroTelFormatado !== null ? numeroTelFormatado : numeroTel;
 });
