@@ -3,8 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agenda de Contatos</title>
+    <title>SM Contacts</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="container">
@@ -13,7 +25,12 @@
         <p>Salve seus contatos abaixo!</p>
       </header>
       <form id="form">
-        <input id="nomeInput" type="text" required placeholder="Nome + Sobrenome" />
+        <input
+          id="nomeInput"
+          type="text"
+          required
+          placeholder="Nome + Sobrenome"
+        />
 
         <input
           id="telefoneInput"
@@ -22,7 +39,7 @@
           required
           placeholder="(DDD) + Telefone"
         />
-        <button class="btnEnvio" type="submit">Adicionar</button>
+        <button class="btnEnvio" type="submit">Adicionar +</button>
         <div class="errorMsg">
           <div>
             <p class="nomeError">Insira corretamente!</p>
@@ -37,15 +54,11 @@
           <tr>
             <th>Nome do Contato</th>
             <th>Telefone do Contato</th>
-            <th>Status</th>
           </tr>
         </thead>
         <tbody id="tableBody">
-          <td>André</td>
-          <td>(11)9999-9999</td>
-          <span
-            ><td class="tdStatus addError">Adicionado com Sucesso!</td></span
-          >
+          <td>Example</td>
+          <td>(XX)9999-9999</td>
         </tbody>
       </table>
     </div>
