@@ -3,6 +3,8 @@ const inputTel = document.getElementById("telefoneInput");
 const form = document.getElementById("form");
 const btnEnvio = document.querySelector(".btnEnvio");
 btnEnvio.disabled = false;
+let numeroTelFormatado = "";
+let nomeValido = "";
 let nomes = [];
 let telefones = [];
 let linhas = "";
@@ -41,20 +43,15 @@ function attBody() {
   inputTel.value = "";
 }
 
-//ADICIONAR VALIDAÇÃO DO CAMPO STATUS
-
-//ADICIONAR VALIDAÇÃO DO CAMPO NOME PARA ACEITAR APENAS STRING, NOT NULL, NOT NUMBERS
-
-//CORRIGIR RESPONSIVIDADE DA TABLE AO EXIBIR AS MSGS DE ERRO
-
 //ADICIONAR VALIDAÇÃO DE CAMPO COM DOIS NOMES
 function validaNome(nomeCompleto) {
-  const nomeArray = nomeCompleto.split(" ");
-  return nomeArray.length >= 2;
+  const nomeSemEspaco = nomeCompleto.trim();
+  const nomeArray = nomeSemEspaco.split(" ");
+  return nomeArray.length >= 2 && !/\d/.test(nomeSemEspaco);
 }
 
 inputNome.addEventListener("input", function (e) {
-  let nomeValido = validaNome(e.target.value);
+  nomeValido = validaNome(e.target.value);
   const errorNome = document.querySelector(".nomeError");
 
   if (!nomeValido) {
@@ -87,7 +84,7 @@ function formatarNumeroTel(numeroTel) {
 
 inputTel.addEventListener("input", function (e) {
   const numeroTel = e.target.value;
-  const numeroTelFormatado = formatarNumeroTel(numeroTel);
+  numeroTelFormatado = formatarNumeroTel(numeroTel);
   const telError = document.querySelector(".telError");
 
   if (numeroTelFormatado === null) {
