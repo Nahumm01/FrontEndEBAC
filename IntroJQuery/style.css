@@ -46,3 +46,40 @@ button {
 #btnCancel {
   background-color: #ff0210;
 }
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  max-width: 25%;
+  list-style: none;
+  position: relative;
+  max-height: 280px;
+  overflow-y: hidden;
+}
+
+ul li img {
+  width: 100%;
+}
+
+.overlayImg{
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all ease .3s;
+}
+
+.overlayImg a{
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li:hover .overlayImg{
+  opacity: 1;
+}
