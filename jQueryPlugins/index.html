@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container container-flex">
         <h1>EBAC Motors</h1>
         <div class="menuHM">
           <span> </span>
@@ -50,6 +50,122 @@
       <img src="images/slide2.png" alt="Carro BMW" />
       <img src="images/slide3.png" alt="Carro Ford" />
     </div>
+    <section id="about">
+      <div class="container container-flex">
+        <img src="images/loja.jpg" alt="Imagem da Loja EBAC Motors" />
+        <div>
+          <h2>Sobre a EBAC Motors</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Reprehenderit modi consectetur blanditiis atque fugit hic illo
+            nostrum rem sit debitis excepturi quam, voluptas voluptatibus eius
+            numquam corrupti sequi tenetur officiis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="destaque">
+      <div class="container">
+        <h2>Em destaque</h2>
+        <ul class="container-flex listaVeiculo">
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <strong>R$ 75.000</strong>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li class="itemCentral">
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <strong>R$ 75.000</strong>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <strong>R$ 75.000</strong>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <strong>R$ 75.000</strong>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li class="itemCentral">
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <strong>R$ 75.000</strong>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="promo">
+      <div class="container">
+        <h2>Em destaque</h2>
+        <ul class="container-flex listaVeiculo">
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <div class="price">
+              <del>100.000</del>
+              <strong> 75.000</strong>
+            </div>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li class="itemCentral">
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <div class="price">
+              <del>100.000</del>
+              <strong> 75.000</strong>
+            </div>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <div class="price">
+              <del>100.000</del>
+              <strong> 75.000</strong>
+            </div>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li>
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <div class="price">
+              <del>100.000</del>
+              <strong> 75.000</strong>
+            </div>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+          <li class="itemCentral">
+            <img src="./images/carro-bmw.png" alt="" srcset="" />
+            <h3>Carro BMW</h3>
+            <p>Pipipipi</p>
+            <div class="price">
+              <del>100.000</del>
+              <strong> 75.000</strong>
+            </div>
+            <button type="button">Tenho Interesse!</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
@@ -67,6 +183,10 @@
       $(document).ready(function () {
         $("#carrousselImg").slick({
           autoplay: true,
+        });
+
+        $(".menuHM").click(function () {
+          $("nav").slideToggle();
         });
       });
     </script>
