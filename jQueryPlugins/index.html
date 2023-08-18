@@ -176,7 +176,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="contato">
       <div class="container">
         <h2>Entre em Contato</h2>
         <form action="">
@@ -198,7 +198,7 @@
           </div>
           <div class="formCampo">
             <label for="mensagem">Mensagem:</label>
-            <textarea type="text" id="mensagem"></textarea>
+            <textarea type="text" id="mensagem" name="mensagem"></textarea>
           </div>
           <button type="submit">Enviar</button>
         </form>
@@ -244,45 +244,6 @@
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#carrousselImg").slick({
-          autoplay: true,
-        });
-
-        $(".menuHM").click(function () {
-          $("nav").slideToggle();
-        });
-
-        $("#telefone").mask("(00) 00000-0000");
-
-        $("form").validate({
-          rules: {
-            nome: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email: true,
-            },
-            telefone: {
-              required: true,
-            },
-          },
-          messages: {
-            nome: "Por favor insira o seu nome!",
-          },
-          submitHandler: function (form) {
-            console.log(form);
-          },
-          invalidHandler: function (evento, validador) {
-            let camposInc = validador.numberOfInvalids();
-            if (camposInc) {
-              alert(`Existem ${camposInc} campos incorretos no seu envio!`);
-            }
-          },
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
