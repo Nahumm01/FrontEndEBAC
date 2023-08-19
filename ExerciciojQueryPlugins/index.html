@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="container container-flex">
+      <h1>Seja bem vindo</h1>
+      <p>Para prosseguir, preencha os campos abaixo!</p>
+    </header>
+
+    <section>
+      <div class="container">
+        <form action="">
+          <label for="nome">NOME</label>
+          <input type="text" name="nome" id="nome" />
+          <label for="email">EMAIL</label>
+          <input type="email" name="email" id="email" />
+          <label for="tel">TELEFONE</label>
+          <input type="tel" name="tel" id="tel" />
+          <label for="CPF">CPF</label>
+          <input type="number" name="CPF" id="CPF" />
+          <label for="endereco">ENDEREÇO</label>
+          <input type="text" name="endereco" id="endereco" />
+          <label for="CEP">CEP</label>
+          <input type="number" name="CEP" id="CEP" />
+          <button type="button">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
