@@ -37,9 +37,13 @@ form label {
 }
 
 form button {
+  background-color: #ff6e7f;
+  color: azure;
+  font-size: 15px;
+  font-weight: bold;
   width: 50%;
   padding: 4px;
-  margin: 10px auto;
+  margin: 20px auto;
   cursor: pointer;
   border: none;
 }
