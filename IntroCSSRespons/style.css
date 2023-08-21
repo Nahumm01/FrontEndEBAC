@@ -1,6 +1,60 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 16px 0 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.subMenu {
+  background-color: beige;
+  display: none;
+  position: absolute;
+  left: 0;
+  max-width: 300PX;
+  width: 100%;
+  top: 100%;
+}
+
+.menu > li {
+  float: left;
+  list-style: none;
+  padding: 16px;
+  border-top: 4px solid transparent;
+  position: relative;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.menu li:hover{
+    border-color:red ;
+}
+
+.menu li:hover .subMenu{
+    display: block;
+}
+
+.subMenu li{
+    display: block;
+    padding: 8px;
+
 }
