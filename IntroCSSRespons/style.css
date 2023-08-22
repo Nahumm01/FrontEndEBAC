@@ -162,3 +162,31 @@ aside .noticia {
   }
 
 }
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+  .container{
+    max-width: 90%;
+  }
+
+  .btnMenu button{
+    display: none;
+  }
+
+  .destaque .noticia a{
+    font-size: 1.5em;
+  }
+
+  .noticias{
+    grid-template-columns: repeat(2,49%);
+  }
+
+}
+
+
+@media screen and (min-width:1024px) {
+  .btnMenu button{
+    display: none;
+  }
+  
+}
+ 
