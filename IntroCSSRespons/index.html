@@ -22,9 +22,7 @@
         </form>
       </div>
       <div class="btnMenu">
-        <button type="button" class="btn">
-          Abrir Menu
-        </button>
+        <button type="button">Abrir Menu</button>
       </div>
       <nav class="container">
         <ul class="menu">
@@ -149,6 +147,14 @@
         </section>
       </aside>
     </div>
-    
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btnMenu button").click(function () {
+          $(".menu").slideToggle();
+        });
+      });
+    </script>
   </body>
 </html>
