@@ -18,7 +18,7 @@ form{
 }
 
 form .field{
-    padding: 8px;
+    padding: 5px;
     border-bottom: 1px solid #0d6efd;
     font-size: 20px;
 }
@@ -34,4 +34,5 @@ form button{
 
 h5.warn{
     border-bottom: 0.5px solid #dc3545;
+    padding: 10px;
 }
