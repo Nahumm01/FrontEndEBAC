@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dropdown BS</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_css_bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+                Cadastrar
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item">
+                    <a href="#">Novo Usuário</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo Fornecedor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo Funcionário</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <script src="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
+  </body>
 </html>
