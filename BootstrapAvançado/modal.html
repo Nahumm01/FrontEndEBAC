@@ -10,6 +10,51 @@
     />
   </head>
   <body>
+    <button
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exemplo-modal"
+    >
+      Abrir Modal
+    </button>
+    <div id="exemplo-modal" class="modal" data-bs-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Título do Modal</h5>
+            <button
+              type="button"
+              class="btn btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
+              eveniet! Quo soluta in esse explicabo provident itaque, dicta
+              cumque. Est facere porro amet placeat ex cupiditate mollitia
+              consectetur ad quia?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Aceitar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
   </body>
 </html>
