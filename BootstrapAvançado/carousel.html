@@ -10,27 +10,48 @@
     />
   </head>
   <body>
-    <div class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div data-bs-interval="1000" class="carousel-item active">
-          <img
+          <img class="d-block w-100"
             src="https://cdn.pixabay.com/photo/2023/09/01/01/15/mantis-8226119_1280.jpg"
             alt=""
           />
+          <div class="carousel-caption">
+            <h3>Foto de um Mantis</h3>
+          </div>
         </div>
         <div data-bs-interval="1000" class="carousel-item">
-          <img
+          <img class="d-block w-100"
             src="https://cdn.pixabay.com/photo/2023/08/15/05/37/lighthouse-8191282_1280.jpg"
             alt=""
           />
+          <div class="carousel-caption">
+            <h3>Foto de um Farol</h3>
+          </div>
         </div>
         <div data-bs-interval="1000" class="carousel-item">
-          <img
+          <img class="d-block w-100"
             src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
             alt=""
           />
+          <div class="carousel-caption">
+            <h3>Foto de uma Árvore</h3>
+          </div>
         </div>
       </div>
+      <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+        <span class="carousel-control-prev-icon" ></span>
+      </button>
+      <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+        <span class="carousel-control-next-icon" ></span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0" ></button>
+        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1" ></button>
+        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2" ></button>
+      </div>
+
     </div>
 
     <script src="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
