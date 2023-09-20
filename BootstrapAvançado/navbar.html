@@ -57,6 +57,9 @@
               </li>
             </ul>
           </nav>
+          <button type="button" class="btn btn-warning" id="btnNotifica">
+            Notificações
+          </button>
         </div>
       </div>
     </header>
@@ -113,9 +116,30 @@
         <h2>Contato</h2>
       </section>
     </div>
-    <div>
-        
+    <div class="toast-container">
+      <div class="toast position-fixed bottom-0 end-0 p-4" id="msgAlerta">
+        <header class="toast-header">
+          <strong>Importante!</strong>
+        </header>
+        <div class="toast-body">Você possui 10 mensagens não lidas!</div>
+        <div class="mt-2 pt-2 border-top">
+          <button data-bs-dismiss="toast" type="button" class="btn btn-danger">
+            Descartar
+          </button>
+        </div>
+      </div>
     </div>
     <script src="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+      const ativadorToast = document.getElementById("btnNotifica");
+      const msg = document.getElementById("msgAlerta");
+
+      if (ativadorToast) {
+        ativadorToast.addEventListener("click", function () {
+          const toast = new bootstrap.Toast(msg);
+          toast.show();
+        });
+      }
+    </script>
   </body>
 </html>
