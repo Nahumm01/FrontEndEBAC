@@ -22,3 +22,7 @@ button {
 .nav .nav-link,.navbar-brand,.navbar-brand:hover{
     color: #fff;
 }
+
+.navbar-toggler{
+    background-color: #ffeae6;
+}
