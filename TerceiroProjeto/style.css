@@ -2,10 +2,6 @@ body{
     font-family: Roboto,sans-serif;
 }
 
-.navbar-brand{
-    font-family: Pacifico,sans-serif;
-}
-
 .navbar {
   background-color: #e15f41;
 }
@@ -25,4 +21,16 @@ button {
 
 .navbar-toggler{
     background-color: #ffeae6;
+}
+
+.section-title{
+    font-family: Pacifico,cursive;
+}
+
+.section-title>span{
+    color: #e15f41;
+}
+
+#about{
+    background-color: #ffeae6 ;
 }
