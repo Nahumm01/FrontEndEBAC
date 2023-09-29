@@ -39,7 +39,7 @@ button {
   color: #e15f41;
 }
 
-.nav-cardapio .nav-link.active{
+.nav-cardapio .nav-link.active,#talk button{
   background-color: #e15f41;
   color: #fff;
 }
@@ -51,3 +51,14 @@ button {
 #cardapio{
   background-color: #ffeae6;
 }
+
+.social-links li{
+  list-style: none;
+  display: inline;
+  
+}
+
+.social-links li a{
+  text-decoration: none;
+}
+
