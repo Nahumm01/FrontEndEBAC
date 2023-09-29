@@ -479,7 +479,7 @@
                   <label for="nome" class="form-label text-colored fw-bold"
                     >Seu nome</label
                   >
-                  <input type="text" id="nome" class="form-control" required placeholder="Como devemos te chamar?"/>
+                  <input type="text" id="nome" name="nome" class="form-control" required placeholder="Como devemos te chamar?"/>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label text-colored fw-bold"
@@ -488,6 +488,7 @@
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     class="form-control"
                     required
                     placeholder="name@exeample.com"
@@ -497,14 +498,14 @@
                   <label for="tel" class="form-label text-colored fw-bold"
                     >Seu telefone (Opcional)</label
                   >
-                  <input type="tel" id="tel" class="form-control" />
+                  <input type="tel" name="tel" id="tel" class="form-control" />
                 </div>
                 <div class="mb-3">
                   <label for="msg" class="form-label text-colored fw-bold"
-                    >Seu mensagem</label
+                    >Sua mensagem</label
                   >
-                  <textarea id="msg" class="form-control" required placeholder="Fale com a gente!"></textarea>
-                  <button type="submit" class="btn fw-bold mt-3">Enviar</button>
+                  <textarea id="msg" class="form-control" name="msg" required placeholder="Fale com a gente!"></textarea>
+                  <button type="submit" class="btn fw-bold mt-3 d-block">Enviar</button>
                 </div>
               </form>
             </div>
