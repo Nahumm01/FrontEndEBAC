@@ -66,6 +66,9 @@ button {
   .carousel-item img {
     height: 280px;
   }
+}
 
-
+#nome-error,#email-error,#tel-error,#msg-error{
+  color: #e15f41;
+  padding: 4px;
 }
