@@ -6,14 +6,14 @@ body {
   background-color: #e15f41;
 }
 
-.nav .nav-link,
+#header .nav .nav-link,
 .navbar-brand,
 .navbar-brand:hover,
 .nav-cardapio .nav-link.active:hover {
   color: #fff;
 }
 
-.nav .nav-link.active {
+#header .nav .nav-link.active {
   background-color: #fff;
   color: #e15f41;
 }
@@ -74,4 +74,3 @@ body {
   color: #e15f41;
   padding: 4px;
 }
-
