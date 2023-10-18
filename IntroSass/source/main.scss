@@ -2,11 +2,11 @@
 @use "config/variaveis";
 @use "sass:math";
 
-@mixin elementoForm() {
+@mixin elementoForm($margin: 16px) {
   padding: 8px;
   display: block;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: $margin;
 }
 
 @function pixelToEm($alvoEmPixel, $contextoEmPixel: 16px) {
