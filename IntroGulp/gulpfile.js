@@ -1,4 +1,11 @@
 const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"))
+
+function compileSass(){
+  return gulp.src("./source/styles/main.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("./build/styles"))
+}
 
 function funcaoPadrao(callback) {
   setTimeout(function(){
@@ -19,3 +26,4 @@ function dizTchau() {
 
 exports.default = gulp.parallel(funcaoPadrao, dizOi);
 exports.dizOi = dizOi;
+exports.sass = compileSass;
