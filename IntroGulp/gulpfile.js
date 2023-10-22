@@ -1,22 +1,23 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourceMaps = require("gulp-sourcemaps");
-const uglify = require("gulp-uglify")
-const obfuscate = require("gulp-obfuscate")
-const imageMin = require("gulp-imagemin")
+const uglify = require("gulp-uglify");
+const obfuscate = require("gulp-obfuscate");
+const imageMin = require("gulp-imagemin");
 
-function comprimeImg(){
-  return gulp.src("./source/images/*")
+function comprimeImg() {
+  return gulp
+    .src("./source/images/*")
     .pipe(imageMin())
-      .pipe(gulp.dest("./build/images"))
+    .pipe(gulp.dest("./build/images"));
 }
 
-function comprimeJS(){
-  return gulp.src("./source/scripts/*.js")
+function comprimeJS() {
+  return gulp
+    .src("./source/scripts/*.js")
     .pipe(uglify())
-      .pipe(obfuscate())
-        .pipe(gulp.dest("./build/scripts"))
-
+    .pipe(obfuscate())
+    .pipe(gulp.dest("./build/scripts"));
 }
 
 function compileSass() {
@@ -32,28 +33,20 @@ function compileSass() {
     .pipe(gulp.dest("./build/styles"));
 }
 
-function funcaoPadrao(callback) {
-  setTimeout(function () {
-    console.log("Executando via Gulp");
-    callback();
-  }, 2000);
-}
-
-function dizOi(callback) {
-  console.log("Olá Gulp");
-  dizTchau();
-  callback();
-}
-
-function dizTchau() {
-  console.log("Tchau Gulp");
-}
-
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.dizOi = dizOi;
-exports.sass = compileSass;
-exports.watch = function(){
-  gulp.watch("./source/styles/*.scss",{ignoreInitial:false}, gulp.series(compileSass))
-}
-exports.javascript = comprimeJS;
-exports.images = comprimeImg;
+exports.default = function () {
+  gulp.watch(
+    "./source/styles/*.scss",
+    { ignoreInitial: false },
+    gulp.series(compileSass)
+  );
+  gulp.watch(
+    "./source/scripts/*.js",
+    { ignoreInitial: false },
+    gulp.series(comprimeJS)
+  );
+  gulp.watch(
+    "./source/images/*",
+    { ignoreInitial: false },
+    gulp.series(comprimeImg)
+  );
+};
