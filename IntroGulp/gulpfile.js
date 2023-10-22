@@ -3,6 +3,13 @@ const sass = require("gulp-sass")(require("sass"));
 const sourceMaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify")
 const obfuscate = require("gulp-obfuscate")
+const imageMin = require("gulp-imagemin")
+
+function comprimeImg(){
+  return gulp.src("./source/images/*")
+    .pipe(imageMin())
+      .pipe(gulp.dest("./build/images"))
+}
 
 function comprimeJS(){
   return gulp.src("./source/scripts/*.js")
@@ -49,3 +56,4 @@ exports.watch = function(){
   gulp.watch("./source/styles/*.scss",{ignoreInitial:false}, gulp.series(compileSass))
 }
 exports.javascript = comprimeJS;
+exports.images = comprimeImg;
