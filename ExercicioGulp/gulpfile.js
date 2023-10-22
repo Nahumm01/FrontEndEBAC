@@ -9,9 +9,11 @@ function compileSass() {
   return gulp
     .src("./source/styles/main.scss")
     .pipe(sourceMaps.init())
-    .pipe(sass({
-        outputStyle:"compressed"
-    }))
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+      })
+    )
     .pipe(sourceMaps.write("./maps"))
     .pipe(gulp.dest("./build/styles"));
 }
@@ -20,7 +22,7 @@ function compressImg() {
   return gulp
     .src("./source/images/*")
     .pipe(imageMin())
-    .pipe(gulp.dest("/build/images"));
+    .pipe(gulp.dest("./build/images/"));
 }
 
 function compressJavascript() {
@@ -42,3 +44,7 @@ exports.default = function () {
     { ignoreInitial: false },
     gulp.series(compressJavascript);
 };
+
+exports.images = compressImg;
+exports.javascript = compressJavascript;
+exports.sass = compileSass;
