@@ -1,9 +1,14 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"))
+const sourceMaps = require("gulp-sourcemaps")
 
 function compileSass(){
   return gulp.src("./source/styles/main.scss")
-    .pipe(sass())
+  .pipe(sourceMaps.init())
+    .pipe(sass({
+      outputStyle:'compressed'
+    }))
+    .pipe(sourceMaps.write("./maps"))
     .pipe(gulp.dest("./build/styles"))
 }
 
