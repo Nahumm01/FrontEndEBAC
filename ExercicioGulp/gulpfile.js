@@ -34,17 +34,10 @@ function compressJavascript() {
 }
 
 exports.default = function () {
-  gulp.watch("./source/images/*"),
-    { ignoreInitial: false },
-    gulp.series(compressImg);
-  gulp.watch("./source/styles/*.scss"),
-    { ignoreInitial: false },
-    gulp.series(compileSass);
-  gulp.watch("./source/scritps/*.js"),
-    { ignoreInitial: false },
-    gulp.series(compressJavascript);
+  gulp.watch("./source/styles/*.scss",{ ignoreInitial: false },gulp.series(compileSass));
+  gulp.watch("./source/images/*",{ ignoreInitial: false },gulp.series(compressImg));
+  gulp.watch("./source/scripts/*.js",{ ignoreInitial: false },gulp.series(compressJavascript));
+
 };
 
-exports.images = compressImg;
-exports.javascript = compressJavascript;
-exports.sass = compileSass;
+
