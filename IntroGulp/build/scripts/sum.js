@@ -1,1 +1,1 @@
-function somar(o,r){return o+r}module.exports=somar;
+function ಠ_ಠ921(o,r){return o+r}module.ಠ_ಠ922=ಠ_ಠ921;

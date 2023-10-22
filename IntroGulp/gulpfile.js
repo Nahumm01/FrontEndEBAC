@@ -2,11 +2,13 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourceMaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify")
+const obfuscate = require("gulp-obfuscate")
 
 function comprimeJS(){
   return gulp.src("./source/scripts/*.js")
     .pipe(uglify())
-      .pipe(gulp.dest("./build/scripts"))
+      .pipe(obfuscate())
+        .pipe(gulp.dest("./build/scripts"))
 
 }
 
