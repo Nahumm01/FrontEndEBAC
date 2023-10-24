@@ -2,3 +2,20 @@ body {
   background-color: #192a56;
   color: #f5f6fa;
 }
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .container {
+    background-color: yellow;
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    background-color: red;
+    max-width: 70%;
+  }
+}
