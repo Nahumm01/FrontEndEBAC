@@ -2,6 +2,17 @@
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1024px)";
 
+.marginBottom8{
+    margin-bottom: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: @fontePadrao;
+}
+
 body {
   background-color: @corDeFundo;
   color: @corTextos;
@@ -11,15 +22,41 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
- 
+
   @media @breakpointTablet {
-    background-color: yellow;
     max-width: 80%;
   }
-  
+
   @media @breakpointMobile {
-    background-color: red;
     max-width: 70%;
   }
+}
 
+header {
+  padding: 24px;
+
+  .profile-avatar {
+    display: block;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+  }
+}
+
+.profile-bio {
+  text-align: center;
+
+  &-name {
+    font-size: 16px;
+    .marginBottom8()
+  }
+
+  &-subtitle {
+    font-size: 14px;
+    .marginBottom8()
+  }
+
+  &-desc {
+    font-size: 14px;
+    opacity: 0.7;
+  }
 }
