@@ -1,21 +1,22 @@
 @import "variables.less";
+@import "maps.less";
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1024px)";
 
-.marginBottom8{
-    margin-bottom: 8px;
+.marginBottom8 {
+  margin-bottom: 8px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: @fontePadrao;
+  font-family: #fonts[principalFont]
 }
 
 body {
-  background-color: @corDeFundo;
-  color: @corTextos;
+  background-color: #colors[backgroundColor];
+  color: #colors[textColor];
 }
 
 .container {
@@ -47,16 +48,34 @@ header {
 
   &-name {
     font-size: 16px;
-    .marginBottom8()
+    .marginBottom8();
   }
 
   &-subtitle {
     font-size: 14px;
-    .marginBottom8()
+    .marginBottom8();
   }
 
   &-desc {
     font-size: 14px;
     opacity: 0.7;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+  li {
+    list-style: none;
+
+    img {
+      transition: all ease 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
