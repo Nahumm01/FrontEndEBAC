@@ -15,6 +15,10 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 1024px) {
   .container {
@@ -27,7 +31,7 @@ body {
   }
 }
 header {
-  padding: 24px;
+  padding-bottom: 24px;
 }
 header .profile-avatar {
   display: block;
@@ -49,6 +53,9 @@ header .profile-avatar {
   font-size: 14px;
   opacity: 0.7;
 }
+li {
+  list-style: none;
+}
 .social-links {
   display: flex;
   justify-content: space-between;
@@ -56,12 +63,29 @@ header .profile-avatar {
   width: 100%;
   margin: 0 auto;
 }
-.social-links li {
-  list-style: none;
-}
 .social-links li img {
   transition: all ease 0.3s;
 }
 .social-links li img:hover {
   transform: scale(1.1);
+}
+.projects-list {
+  margin-top: 32px;
+}
+.projects-list-item a {
+  text-decoration: none;
+  background-color: #0097e6;
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #f5f6fa;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #0097e6;
+  transition: all ease 0.5s;
+}
+.projects-list-item a:hover {
+  color: #0097e6;
+  background-color: transparent;
 }
