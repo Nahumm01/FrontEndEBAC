@@ -1,6 +1,13 @@
 module.exports=function(grunt){
     grunt.initConfig({
         pkg:grunt.file.readJSON("package.json"),
+        less:{
+            development:{
+                files:{
+                    "main.css":"main.less"
+                }
+            }
+        }
     })
 
     grunt.registerTask("olaGrunt",function(){
@@ -9,8 +16,10 @@ module.exports=function(grunt){
             console.log("Olá Grunt")
             done()
         }, 4000)
+
+        grunt.loadNpmTasks("grunt-contrib-less")
        
     })
 
-    grunt.registerTask("default",["olaGrunt"])
+    grunt.registerTask("default",["less"])
 }
