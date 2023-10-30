@@ -1,13 +1,20 @@
 @import "maps.less";
+@import "variables.less";
+
+
+@marginZero:{margin: 0}; 
+@paddingZero:{padding: 0};
+@boxSizingBorder:{box-sizing: border-box};
+
 
 @breakpointTablet: ~"(max-width: 1023px)";
 @breakpointMobile: ~"(max-width: 767px)";
 
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: @marginZero;
+  padding: @paddingZero;
+  box-sizing: @boxSizingBorder;
   font-family: #fonts[principalFont];
 }
 
