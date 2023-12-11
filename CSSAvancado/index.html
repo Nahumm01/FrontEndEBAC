@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./SMACSS/base.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./SMACSS/base.css" />
+    <link rel="stylesheet" href="./SMACSS/layout.css" />
+    <link rel="stylesheet" href="./SMACSS/module.css" />
+    <link rel="stylesheet" href="./SMACSS/tema-a.css">
+    <link rel="stylesheet" href="./SMACSS/tema-b.css">
+  </head>
+  <body class="tema-b">
     <h1>Olá Mundo!</h1>
-</body>
+    <div id="header">
+      <div class="container">
+        <h1 class="title">Nome do Site</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Produtos</a>
+            </li>
+            <li>
+              <a href="#">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="accordion is-open">
+        <header class="accordion-header">Accordion</header>
+        <p class="accordion-content">Conteúdo</p>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="msg msg-is-error">
+          <h5 class="msg-title">Atenzione</h5>
+          <p class="msg-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus placeat asperiores qui eveniet quidem velit
+            voluptatibus autem quae eos laboriosam pariatur, harum dolor
+            perferendis mollitia est provident molestiae omnis recusandae!
+          </p>
+        </div>
+      </div>
+      <h3 class="title">Nome do Site no Rodapé</h3>
+    </footer>
+    <script>
+      const accordions = document.querySelectorAll(".accordion-header");
+      for (let i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function (e) {
+            e.target.parentNode.classList.toggle("is-open")
+        });
+      }
+    </script>
+  </body>
 </html>
